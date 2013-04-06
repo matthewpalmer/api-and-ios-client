@@ -3,5 +3,8 @@
 - Delete
 - Update
 
-####Client:
-- Whole thing
+####iOS Client:
+- Find specific name
+- Delete
+- Update
+
