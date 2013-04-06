@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AFJSONRequestOperation.h"
 
 @interface CLIViewController : UIViewController
-
+-(void)queryApi;
 @end

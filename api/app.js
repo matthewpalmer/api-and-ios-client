@@ -10,7 +10,8 @@ var express = require('express')
   , jade = require('jade')
   , path = require('path');
 
-var create = require('./create');
+var create = require('./create')
+  , read = require('./read');
 
 var app = express();
 var MongoClient = require('mongodb').MongoClient;
@@ -35,7 +36,12 @@ app.configure('development', function(){
 
 app.get('/', routes.index);
 app.get('/users', user.list);
-
+app.get('/read', function(req,res) {
+  read.read('', function(items) {
+    console.log(items);
+    res.send(items);
+  });
+});
 app.post('/create', function(req,res) {
   create.create(req,res);
 });
