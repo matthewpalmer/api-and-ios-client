@@ -13,18 +13,3 @@ describe('Create', function() {
 		expect(create.create()).to.not.be.ok();
 	});
 });
-
-/*
-describe('Read', function() {
-	it('should return an object', function(done) {
-		assert.doesNotThrow(function() {
-			read.read(function() {
-				done();
-			}, function(err) {
-				if (err) throw err;
-				done();
-			});
-		});
-	});
-});
-*/

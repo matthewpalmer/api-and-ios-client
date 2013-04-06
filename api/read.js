@@ -7,7 +7,6 @@ exports.read = function(name,callback,errCallback) {
 		console.log('Read:',db.databaseName);
 		if (name) {
 			collection.findOne({name:name}, function(err,item) {
-				//console.log('the one item was',item);
 				try {
 					if (item) {
 
@@ -31,7 +30,6 @@ exports.read = function(name,callback,errCallback) {
 			collection.find().toArray(function(err,items){
 				if (items) {
 					callback(items);
-					//console.log(items);
 					return items;
 				} else {
 					throw err;
