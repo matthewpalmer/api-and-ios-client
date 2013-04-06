@@ -8,7 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import "AFJSONRequestOperation.h"
+#import "AFHTTPClient.h"
 
 @interface CLIViewController : UIViewController
+@property (strong, nonatomic)   UITextField *name;
+@property (strong, nonatomic)   UITextField *age;
+             
 -(void)queryApi;
+-(void)createApi;
 @end

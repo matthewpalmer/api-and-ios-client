@@ -43,7 +43,10 @@ app.get('/read', function(req,res) {
   });
 });
 app.post('/create', function(req,res) {
-  create.create(req,res);
+  create.create(req, function(result) {
+    console.log(result);
+    res.send(200);
+  });
 });
 
 http.createServer(app).listen(app.get('port'), function(){
